@@ -28,7 +28,7 @@ def main():
     while True:
             tpn, tptat = sensor.readData()
             if tpn != None and tptat != None:
-                print(datetime.datetime.today().strftime("[%Y/%m/%d %H:%M:%S]"),"temperature=%.1f[℃]" %tptat)
+                print(datetime.datetime.today().strftime("[%Y/%m/%d %H:%M:%S]"),"temperature=%.1f[degC]" %tptat)
                 print(tpn[0:4])
                 print(tpn[4:8])
                 print(tpn[8:12])

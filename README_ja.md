@@ -30,6 +30,7 @@ sample_gui_d6t.py を実行すると以下のようなグラフを確認する�
 2. ターミナルを開き、次のコマンドを実行します。  
     ```
     $ mkdir omron_sensor
+    $ cd omron_sensor
     $ git clone https://github.com/omron-devhub/d6t-grove-raspberrypi.git
     ```
 

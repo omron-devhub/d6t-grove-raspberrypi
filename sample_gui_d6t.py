@@ -40,6 +40,8 @@ def main():
                           tpn[12:16]])
 
                 X,Y = np.meshgrid(x, y)
+                
+                plt.clf()
                 plt.pcolor(X,Y,Z,cmap="coolwarm",vmax=35,vmin=25)
                 
                 if visibleColorBar == False:

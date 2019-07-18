@@ -9,7 +9,7 @@ import pigpio
 class GroveD6t:
     I2C_ADDR = 0x0a
     pi = pigpio.pi()
-    handle = 0
+    handle = None
 
     def __init__(self,address=0x0a):
         self.I2C_ADDR = address
@@ -19,6 +19,11 @@ class GroveD6t:
             print('If you have not executed the "sudo pigpiod" command, please execute it.')
             raise
 
+    def __del__(self):
+        if self.handle is not None:
+            self.pi.i2c_close(self.handle)
+            self.handle = None
+         
     def readData(self):
         try:
             self.pi.i2c_write_device(self.handle, [0x4c])
